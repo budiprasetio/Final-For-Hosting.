@@ -8,7 +8,7 @@ function sendMessage() {
   userMessageDiv.innerText = userInput;
   chatBox.appendChild(userMessageDiv);
 
-  fetch("/get_response", {
+  fetch("https://bc20-103-124-197-58.ngrok-free.app/get/response", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: userInput }),
